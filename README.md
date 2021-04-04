@@ -11,3 +11,4 @@ A simple Blog app created with technologies: Express, Mongoose, Mongodb, EJS, et
 ![reads](./assets/3.png)
 
 # Features
+The app comes with features like Composing the blog, Deleting a blog, Liking a blog and even commenting on your favourite blog!
