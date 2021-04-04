@@ -1,0 +1,26 @@
+<%- include('./partials/header') -%>
+
+<div class="compose-container">
+<form action="/compose" method="post" class="my-form">
+    
+        <h4 for="">Title</h4>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Blog Title" autocapitalize="on" autocomplete="off" name="title" style="margin-bottom: 20px"> 
+    </div>
+        
+    
+        <h4 for="">Tagline</h4>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Tagline" autocapitalize="on" autocomplete="off" name="tagline" style="margin-bottom: 20px">
+    </div>
+        
+    
+        <h4 for="">Content</h4>
+    <div class="input-group">
+        <textarea class="form-control" aria-label="With textarea" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-compose">Compose</button>
+</form>
+</div>
+
+<%- include('./partials/footer') -%>

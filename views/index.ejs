@@ -1,0 +1,35 @@
+<%- include('./partials/header') -%> 
+
+<div class="container">
+  <h3>Current Blogs</h3>
+  <form action="/compose" method="get">
+    <button class="btn compose-btn">Compose a New Blog</button>
+  </form>
+</div>
+
+
+<% allBlogs.forEach((singleBlog)=>{ %>
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title"><%=singleBlog.title%></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%=singleBlog.tagline%></h6>
+
+<%          if(singleBlog.content.length > 100) { %>
+                <p class="card-text"><%=singleBlog.content.substring(0, 100)+'...'%></p>
+                <a href="/blogs/<%=singleBlog._id%>" class="card-link">Read Full Blog</a>   
+                <form action="" method="post">
+                  <button class="btn btn-outline-danger btn-sm" formaction="/delete" name="delete" value="<%=singleBlog._id%>" >Delete</button> 
+                </form>       
+<%          } else {  %>
+                <p class="card-text"><%=singleBlog.content%></p>
+                <a href="/blogs/<%=singleBlog._id%>" class="card-link">Read Full Blog</a>  
+                <form action="" method="post">
+                  <button class="btn btn-outline-danger btn-sm" formaction="/delete" name="delete" value="<%=singleBlog._id%>" >Delete</button> 
+                </form>
+<%          }  %>
+        </div>
+      </div>
+<% }); %>
+
+
+<%- include('./partials/footer') -%> 

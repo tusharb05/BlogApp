@@ -1,0 +1,63 @@
+.btn-compose {
+    border-color: #ff4646;
+    color: #ff4646;
+    margin-top: 20px;
+}
+.btn-compose:hover {
+    background-color:  #ff4646;
+    color: white; 
+}
+.input-group {
+    margin-top: 0
+}
+.compose-btn {
+    border: 1px solid #ff4646;
+    border-radius: 3px;
+    color: #ff4646;
+    padding: 0;
+    margin: 0;
+    padding: 5px;
+}
+.compose-btn:hover{
+    border-color: #ff4646;
+    color: white;
+    background-color: #ff4646;
+}
+.btn-like{
+    background-color: white;
+    border: none;
+}
+.btn-like-img{
+    width:20px;
+    height:20px;
+}
+.like-form{
+    margin-left: 150px;
+}
+.comment-input{
+    width: 40%;
+    display: inline-block;
+}
+.comment-area {
+    padding-left: 40px;
+}
+.container{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px
+}
+.btn-compose{
+    margin-bottom: 20px;
+}
+.return{
+    margin: auto;
+    width: 10%;
+    margin-left: 46%;
+}
+.compose-container{
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}

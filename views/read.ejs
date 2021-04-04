@@ -1,0 +1,35 @@
+<%- include('./partials/header') -%>
+
+<div class="read-content" style="width: 80%; margin: auto; text-align: center; margin-top: 20px">
+    <h1><%=blogTitle.charAt(0).toUpperCase() + blogTitle.slice(1)%></h1>
+    <h5 class="card-subtitle text-muted"><%=blogSub.charAt(0).toUpperCase() + blogSub.slice(1)%></h5>
+    <p style="margin-top: 30px;"><%=blogContent.charAt(0).toUpperCase() + blogContent.slice(1)%></p>
+</div>
+
+<form action="/like" method="post" class="like-form">
+    <button type='submit' name="id" value="<%=blogID%>" class="btn-like">
+    	<img src="https://www.vectorico.com/wp-content/uploads/2018/02/Like-Icon.png" alt="" class="btn-like-img">
+    </button>
+    <p style="margin-left: 10px"><%=likeCount%></p> 
+</form>
+
+<form action="/return" method="like">
+	<button class="btn btn-dark return">Home</button>
+</form>
+
+<div class="bg-light comment-area" style="margin-top: 20px">
+	<h4 style="color: black">Comments</h4>
+
+	<div class="comments"></div>
+		<form action="/comment" method="post" accept-charset="utf-8" style="margin-bottom:20px">
+		<input type="text" name="comment" class="form-control comment-input" autocomplete="off" placeholder="Add your comment">
+		<button type="submit" class="btn btn-outline-primary" name="submit" value="<%=blogID%>">Add</button>
+	</form>
+
+	<% totalComments.forEach((comment)=>{ %>
+		<p><%=comment%></p>
+	<% }); %>
+</div>
+
+
+<%- include('./partials/footer') -%>
